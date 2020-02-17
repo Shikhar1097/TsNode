@@ -1,0 +1,28 @@
+{
+  "name": "tstestapp",
+  "version": "1.0.0",
+  "description": "test nodejs and ts app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js --exec babel-node --presets env",
+    "release": "npm run clean && npm run build && npm run serve",
+    "clean": "rm -rf dist && mkdir dist",
+    "build": "babel . -s -D -d dist --presets env --ignore node_modules",
+    "serve": "node dist/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "typescript": "^3.7.5"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-react": "^7.18.3"
+  }
+}
